@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>亞邦百貨｜老闆的真心話</title>
+<meta name="description" content="亞邦百貨的蝦皮評價入口，附贈老闆真心話與官網專屬優惠">
+<meta property="og:title" content="要去看亞邦百貨的蝦皮評價嗎？老闆有話想說 🥹">
+<meta property="og:description" content="看完評價，記得回官網找我們">
+<style>
+  /* ====== 改這裡就能換配色 ====== */
+  :root{
+    --bg:#fff8f1; --card:#ffffff; --ink:#2b2420; --muted:#7a6f68;
+    --brand:#3a7bd5; --brand-ink:#ffffff; --soft:#eef3fb; --line:#eadfd6;
+    --gift:#fff3d6; --gift-line:#f0c96a;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#1c1917; --card:#26221f; --ink:#f4ede6; --muted:#b3a89f;
+           --brand:#6aa0ee; --brand-ink:#10131a; --soft:#2f3542; --line:#3a3330;
+           --gift:#3a3122; --gift-line:#8a7036; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;padding:16px;
+       background:var(--bg);color:var(--ink);
+       font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif}
+  .card{width:100%;max-width:420px;background:var(--card);border:1px solid var(--line);
+        border-radius:24px;padding:32px 24px 24px;text-align:center;
+        box-shadow:0 10px 30px rgba(0,0,0,.06)}
+  .dots{display:flex;gap:6px;justify-content:center;margin-bottom:20px}
+  .dots i{width:8px;height:8px;border-radius:50%;background:var(--line);transition:.3s}
+  .dots i.on{background:var(--brand);width:22px;border-radius:8px}
+  .emoji{font-size:64px;line-height:1;margin-bottom:12px;display:inline-block}
+  .wiggle{animation:wig 1.2s ease-in-out infinite}
+  .bounce{animation:bnc .9s ease-in-out infinite}
+  @keyframes wig{0%,100%{transform:rotate(0)}25%{transform:rotate(-8deg)}75%{transform:rotate(8deg)}}
+  @keyframes bnc{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+  h1{font-size:22px;margin:0 0 10px;line-height:1.4}
+  p{color:var(--muted);margin:0 0 22px;line-height:1.7;font-size:15px}
+  .btns{display:flex;flex-direction:column;gap:10px}
+  button,a.btn{appearance:none;border:0;cursor:pointer;font:inherit;font-size:16px;
+       padding:14px 18px;border-radius:14px;text-decoration:none;display:block;transition:transform .1s,opacity .2s,filter .2s,box-shadow .2s}
+  button:active,a.btn:active{transform:scale(.97)}
+  .primary{background:var(--brand);color:var(--brand-ink);font-weight:700}
+  .ghost{background:var(--soft);color:var(--ink)}
+  .link{background:none;color:var(--muted);font-size:14px;padding:6px;text-decoration:underline}
+  .primary[aria-disabled="true"]{opacity:.35;pointer-events:none}
+  .promise{display:flex;align-items:center;gap:10px;justify-content:center;
+           background:var(--soft);border-radius:14px;padding:14px;margin-bottom:12px;
+           cursor:pointer;user-select:none;font-size:15px}
+  .promise input{width:20px;height:20px;flex:none;accent-color:var(--brand)}
+  .gift{background:var(--gift);border:2px dashed var(--gift-line);border-radius:16px;
+        padding:16px;margin:0 0 16px}
+  .gift small{display:block;color:var(--muted);font-size:13px;margin-bottom:6px}
+  .gift .code{font-size:24px;font-weight:800;letter-spacing:2px;margin:4px 0 10px;font-family:ui-monospace,Menlo,monospace;word-break:break-all}
+  .gift .desc{font-size:14px;margin-bottom:10px}
+  .copy{background:var(--card);color:var(--ink);border:1px solid var(--gift-line);
+        font-size:14px;padding:8px 14px;border-radius:10px;display:inline-block}
+  .step{display:none;animation:in .35s ease}
+  .step.show{display:block}
+  @keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .small{font-size:12px;color:var(--muted);margin-top:18px;line-height:1.6}
+  .nowrap{white-space:nowrap}
+
+  /* 有優惠 / 沒優惠 時各自顯示的文字 */
+  .if-nopromo{display:none}
+  body.no-promo .if-promo{display:none}
+  body.no-promo .if-nopromo{display:inline}
+  body.no-promo .gift{display:none}
+
+  /* 電腦版：卡片稍大、按鈕有滑鼠懸停效果 */
+  @media (min-width:768px){
+    .card{max-width:460px;padding:40px 36px 28px}
+    h1{font-size:24px}
+  }
+  @media (hover:hover){
+    .primary:hover,.ghost:hover,.copy:hover{filter:brightness(.95)}
+    .primary:hover{box-shadow:0 6px 16px rgba(58,123,213,.25)}
+  }
+
+  /* 小螢幕手機（iPhone SE 等）：縮小留白避免擠成一團 */
+  @media (max-width:360px){
+    body{padding:10px}
+    .card{padding:24px 16px 20px;border-radius:20px}
+    h1{font-size:20px}
+    .emoji{font-size:52px}
+    p{font-size:14px}
+    .promise{font-size:14px;padding:12px 10px}
+    .gift .code{font-size:21px}
+  }
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="dots" id="dots"><i class="on"></i><i></i><i></i><i></i></div>
+
+  <!-- 第 1 幕：準備出發 -->
+  <section class="step show" data-step="1">
+    <div class="emoji bounce">🛍️</div>
+    <h1>準備前往「亞邦百貨」蝦皮賣場<br>見證我們的好評了嗎？🤩</h1>
+    <p>那裡有很多買家留下的真心評價，<br>大家怎麼說，一看就知道！</p>
+    <div class="btns">
+      <button class="primary" onclick="show(2)">滿心期待地出發！👉</button>
+      <button class="ghost" onclick="show('stay')">算了，我留在官網逛逛</button>
+    </div>
+  </section>
+
+  <!-- 第 2 幕：急煞車 -->
+  <section class="step" data-step="2">
+    <div class="emoji wiggle">🥺</div>
+    <h1>等等！</h1>
+    <p>在你出發之前，<br>老闆有個不情之請…</p>
+    <div class="btns">
+      <button class="primary" onclick="show(3)">怎麼了？發生什麼事？</button>
+      <button class="link" onclick="show(4)">跳過，直接帶我去 →</button>
+    </div>
+  </section>
+
+  <!-- 第 3 幕：真情流露 -->
+  <section class="step" data-step="3">
+    <div class="emoji wiggle">💸</div>
+    <h1>其實…</h1>
+    <p>蝦皮是個好地方，有滿滿的真實評價。<br>但每成交一筆，平台都會收一筆手續費，<br>老闆的錢包都在偷偷流淚 🥹<br>（痛到無法呼吸）</p>
+    <div class="btns">
+      <button class="primary" onclick="show(4)">拍拍老闆，然後呢？🫳</button>
+      <button class="ghost" onclick="show('stay')">好啦，那我在官網買 ❤️</button>
+    </div>
+  </section>
+
+  <!-- 第 4 幕：約法三章 + 誘因 -->
+  <section class="step" data-step="4">
+    <div class="emoji">🤙</div>
+    <h1>那我們打勾勾約定好？</h1>
+    <p>
+      <span class="if-promo">去那邊看看評價就好，<br>看完回<strong>官網</strong>下單，省下來的手續費<br>老闆直接回饋給你 🎁</span>
+      <span class="if-nopromo">去那邊看看評價就好，<br>看完記得回<strong>官網</strong>找我們，<br>老闆會感動到哭的 🥹</span>
+    </p>
+    <div class="gift">
+      <small>官網專屬優惠碼</small>
+      <div class="code js-code"></div>
+      <div class="desc js-desc"></div>
+      <button class="copy" onclick="copyCode(this)">複製優惠碼</button>
+    </div>
+    <label class="promise">
+      <input type="checkbox" id="pinky" onchange="togglePinky(this.checked)">
+      <span>我答應，只看不買<span class="nowrap">（應該啦 😇）</span></span>
+    </label>
+    <div class="btns">
+      <a class="btn primary js-shopee" id="toShopee" aria-disabled="true" target="_blank" rel="noopener" onclick="afterShopee()">蓋章！前往蝦皮看評價 ⭐</a>
+      <a class="btn ghost js-site">我懂老闆的痛！直接在官網<span class="nowrap">買爆 🔥</span></a>
+    </div>
+  </section>
+
+  <!-- 已去蝦皮：本頁留著等他回來 -->
+  <section class="step" data-step="waiting">
+    <div class="emoji bounce">👀</div>
+    <h1>評價慢慢看～</h1>
+    <p>蝦皮在另一個分頁開好了。<br>
+      <span class="if-promo">看完回來這裡，優惠碼還在等你喔！</span>
+      <span class="if-nopromo">看完記得回來官網逛逛喔！</span>
+    </p>
+    <div class="gift">
+      <small>官網專屬優惠碼</small>
+      <div class="code js-code"></div>
+      <div class="desc js-desc"></div>
+      <button class="copy" onclick="copyCode(this)">複製優惠碼</button>
+    </div>
+    <div class="btns">
+      <a class="btn primary js-site"><span class="if-promo">看完了！回官網用優惠碼 🛒</span><span class="if-nopromo">看完了！回官網逛逛 🛒</span></a>
+      <a class="btn ghost js-shopee" target="_blank" rel="noopener">再開一次蝦皮評價</a>
+    </div>
+  </section>
+
+  <!-- 直接留在官網 -->
+  <section class="step" data-step="stay">
+    <div class="emoji bounce">🎉</div>
+    <h1>耶！你最好了！</h1>
+    <p>老闆感動到想加菜，<br>
+      <span class="if-promo">這個優惠碼送你，官網結帳時輸入就能用！</span>
+      <span class="if-nopromo">馬上帶你回官網 🏃‍♂️</span>
+    </p>
+    <div class="gift">
+      <small>官網專屬優惠碼</small>
+      <div class="code js-code"></div>
+      <div class="desc js-desc"></div>
+      <button class="copy" onclick="copyCode(this)">複製優惠碼</button>
+    </div>
+    <div class="btns">
+      <a class="btn primary js-site">前往亞邦百貨官網 🛒</a>
+      <button class="link" onclick="show(4)">我還是想先看看評價</button>
+    </div>
+  </section>
+
+  <div class="small">本頁為亞邦百貨自行製作，與蝦皮購物無合作或代言關係。<br>手續費碎念純屬老闆心聲，請笑笑就好 🙏</div>
+</main>
+
+<script>
+  /* =========================================================
+     第一次設定：把 Google 試算表「發佈到網路」的 CSV 連結貼在下面
+     之後換優惠、開關優惠，都只要改試算表，不用再動這個檔案
+     ========================================================= */
+  const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSfs6hhXtXQndJHokG-zUZlT9J8A0WfpYLulKRiABNkfNfbGaPL5aiuQQBdDg063dM-jHfSAm-bKoJb/pub?gid=619820661&single=true&output=csv";
+
+  /* 試算表讀不到時的備用內容（平常不用管） */
+  const config = {
+    show:   true,
+    code:   "Band95",
+    desc:   "官網結帳輸入，全館 95 折",
+    shopee: "https://shopee.tw/yesband",
+    site:   "https://www.yesbandshop.com/"
+  };
+
+  /* 試算表 A 欄的名稱 → 對應設定 */
+  const KEYS = { "顯示優惠":"show", "優惠碼":"code", "優惠說明":"desc", "蝦皮網址":"shopee", "官網網址":"site" };
+
+  function apply(){
+    document.body.classList.toggle('no-promo', !config.show || !config.code);
+    document.querySelectorAll('.js-code').forEach(el=>el.textContent=config.code);
+    document.querySelectorAll('.js-desc').forEach(el=>el.textContent=config.desc);
+    document.querySelectorAll('.js-shopee').forEach(a=>a.href=config.shopee);
+    document.querySelectorAll('.js-site').forEach(a=>a.href=config.site);
+  }
+
+  function parseCSV(text){
+    const rows=[]; let row=[], cell='', q=false;
+    for(let i=0;i<text.length;i++){
+      const c=text[i];
+      if(q){
+        if(c=='"' && text[i+1]=='"'){cell+='"';i++;}
+        else if(c=='"') q=false;
+        else cell+=c;
+      }else if(c=='"') q=true;
+      else if(c==','){row.push(cell);cell='';}
+      else if(c=='\n'){row.push(cell);rows.push(row);row=[];cell='';}
+      else if(c!='\r') cell+=c;
+    }
+    row.push(cell); rows.push(row);
+    return rows;
+  }
+
+  function toBool(v){
+    return !["否","no","false","關","off","0","不顯示"].includes(String(v).trim().toLowerCase());
+  }
+
+  async function loadSheet(){
+    if(!SHEET_CSV_URL) return;
+    try{
+      const ctrl=new AbortController(); setTimeout(()=>ctrl.abort(),5000);
+      const res = await fetch(SHEET_CSV_URL, {signal:ctrl.signal, cache:'no-store'});
+      if(!res.ok) return;
+      parseCSV(await res.text()).forEach(([k,v])=>{
+        const key=KEYS[(k||'').trim()];
+        if(!key || v==null) return;
+        v=v.trim();
+        if(key==='show') config.show=toBool(v);
+        else if(v) config[key]=v;
+      });
+      apply();
+    }catch(e){ /* 讀不到就用備用內容 */ }
+  }
+
+  apply();
+  loadSheet();
+
+  const dotIndex = {1:1, 2:2, 3:3, 4:4, waiting:4, stay:4};
+  function show(key){
+    document.querySelectorAll('.step').forEach(s=>s.classList.toggle('show', s.dataset.step==String(key)));
+    document.querySelectorAll('#dots i').forEach((d,i)=>d.classList.toggle('on', i===dotIndex[key]-1));
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  function togglePinky(on){
+    document.getElementById('toShopee').setAttribute('aria-disabled', on ? 'false' : 'true');
+  }
+  function afterShopee(){
+    setTimeout(()=>show('waiting'), 300);
+  }
+  function copyCode(btn){
+    const code=config.code;
+    const done = ()=>{ const t=btn.textContent; btn.textContent='已複製 ✓'; setTimeout(()=>btn.textContent=t,1500); };
+    function fallback(){
+      try{
+        const ta=document.createElement('textarea'); ta.value=code; document.body.appendChild(ta);
+        ta.select(); document.execCommand('copy'); ta.remove(); done();
+      }catch(e){ btn.textContent=code; }
+    }
+    try{ navigator.clipboard.writeText(code).then(done, fallback); }catch(e){ fallback(); }
+  }
+</script>
+</body>
+</html>
